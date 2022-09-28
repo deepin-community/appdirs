@@ -1,0 +1,9 @@
+Test-Command: cp -r test "$AUTOPKGTEST_TMP" && cd "$AUTOPKGTEST_TMP" && pypy -m unittest discover -v
+Depends: pypy-appdirs
+Restrictions: allow-stderr
+Features: test-name=pypy
+
+Test-Command: cp -r test "$AUTOPKGTEST_TMP" && cd "$AUTOPKGTEST_TMP" && for py in $(py3versions -vs); do "python$py" -m unittest discover -v; done
+Depends: python3-all, python3-appdirs
+Restrictions: allow-stderr
+Features: test-name=python3

@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=appdirs
+
+%:
+	dh $@ --with python3,pypy --buildsystem=pybuild
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	touch test/__init__.py
+	dh_auto_test
+	rm -f test/__init__.py
+endif
+
+override_dh_installchangelogs:
+	dh_installchangelogs CHANGES.rst

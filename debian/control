@@ -1,20 +1,18 @@
 Source: appdirs
-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Uploaders: Benjamin Drung <benjamin.drung@cloud.ionos.com>,
- Tristan Seligmann <mithrandi@debian.org>, Scott Kitterman <scott@kitterman.com>
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Tristan Seligmann <mithrandi@debian.org>,
+           Scott Kitterman <scott@kitterman.com>
 Section: python
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                dh-python,
-               pypy,
-               pypy-setuptools,
                python3-all,
                python3-setuptools
 Rules-Requires-Root: no
-Standards-Version: 4.5.0
+Standards-Version: 4.6.0
 Homepage: https://github.com/ActiveState/appdirs
-Vcs-Browser: https://salsa.debian.org/python-team/modules/appdirs
-Vcs-Git: https://salsa.debian.org/python-team/modules/appdirs.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/appdirs
+Vcs-Git: https://salsa.debian.org/python-team/packages/appdirs.git
 
 Package: python3-appdirs
 Architecture: all
@@ -35,23 +33,3 @@ Description: determining appropriate platform-specific directories (Python 3)
  Directory Specification.
  .
  This is the Python 3 version of the package.
-
-Package: pypy-appdirs
-Architecture: all
-Depends: ${misc:Depends}, ${pypy:Depends}
-Description: determining appropriate platform-specific directories (PyPy)
- Depending on your system (Linux, Mac OS X, or Windows), you have to use
- different directories for storing user data. appdirs will help you choose an
- appropriate:
- .
-  * user data directory (user_data_dir function)
-  * user config directory (user_config_dir function)
-  * user cache directory (user_cache_dir function)
-  * site data directory (site_data_dir function)
-  * site config directory (site_config_dir function)
-  * user log directory (user_log_dir function)
- .
- On Linux systems, these function return directories based on the XDG Base
- Directory Specification.
- .
- This is the PyPy version of the package.

@@ -1,3 +1,31 @@
+appdirs (1.4.4-3) unstable; urgency=medium
+
+  * drop pypy support; Closes: #1018738
+
+ -- Sandro Tosi <morph@debian.org>  Mon, 29 Aug 2022 16:58:58 -0400
+
+appdirs (1.4.4-2) unstable; urgency=medium
+
+  [ Benjamin Drung ]
+  * Team upload
+  * Remove myself from Uploaders
+  * Update year in d/copyright
+  * Bump Standards-Version to 4.6.0
+  * Switch to debhelper 13
+
+  [ Ondřej Nový ]
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP.
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Benjamin Drung <benjamin.drung@ionos.com>  Wed, 19 Jan 2022 11:44:10 +0100
+
 appdirs (1.4.4-1) unstable; urgency=medium
 
   * Agreed maintainer change to DPMT.

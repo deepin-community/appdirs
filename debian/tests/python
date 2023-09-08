@@ -2,8 +2,7 @@
 set -e
 set -x
 SRC="${PWD}"
-cd "${ADTTMP}"
+cd "${AUTOPKGTEST_TMP}"
 for py in $(py3versions -vi) ; do
     "python$py" -m unittest discover -s "${SRC}"/test
 done
-pypy -m unittest discover -s "${SRC}"/test
